@@ -14,7 +14,7 @@ public with sharing class lookupController
         String searchKeyword = searchKey + '*';
         String returnQuery = '';
         returnQuery = objectName + ' ( Id, '+String.join(fields,',')+')';
-        String query = 'FIND :searchKeyword IN ALL FIELDS RETURNING '+returningQuery+' LIMIT 20';
+        String query = 'FIND :searchKeyword IN ALL FIELDS RETURNING '+ returnQuery +' LIMIT 20';
         System.debug(' query ->'+query);
         List<List<sObject>> searchRecords = Search.Query(Query);
         return searchRecords.get(0);
