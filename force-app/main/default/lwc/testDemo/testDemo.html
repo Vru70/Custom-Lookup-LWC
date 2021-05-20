@@ -1,0 +1,24 @@
+<!--
+  @author            : Vrushabh Uprikar
+  @last modified on  : 05-20-2021
+  @last modified by  : Vrushabh Uprikar
+  Modifications Log 
+  Ver   Date         Author             Modification
+  1.0   05-20-2021   Vrushabh Uprikar   Initial Version
+-->
+<template>
+  <lightning-card variant="Narrow" title="Custom Lookup" icon-name="standard:account">
+    <p class="slds-p-horizontal_small">
+      <c-search-comp 
+        obj-name="Contact" 
+        icon-name="standard:contact"
+        label-name="Contact" 
+        placeholder="Search"
+        fields={fields} 
+        display-fields={displayFields} 
+        onlookup={handleLookup}>
+      </c-search-comp>
+    </p>
+  
+  </lightning-card>
+</template>
