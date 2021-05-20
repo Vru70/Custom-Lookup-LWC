@@ -6,7 +6,7 @@
  * Ver   Date         Author             Modification
  * 1.0   05-20-2021   Vrushabh Uprikar   Initial Version
 **/
-public with sharing class lookuoController
+public with sharing class lookupController
 {
     @AuraEnabled
     public static List<sObject> search(String objectName, List<String> fields, String searchKey)
@@ -19,5 +19,4 @@ public with sharing class lookuoController
         List<List<sObject>> searchRecords = Search.Query(Query);
         return searchRecords.get(0);
     }
-}
 }
